@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BrianQRGen</title>
+
+    <meta name="author" content="MANZI BRIAN BONHEUR">
+    <meta name="description" content="Professional QR Code Generator">
+
+    <link rel="icon" href="logo.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- QR Generator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- QR Scanner -->
+    <script src="https://unpkg.com/html5-qrcode"></script>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+
+    <div class="brand">
+
+        <img src="logo.png" alt="BrianQRGen">
+
+        <h2>BrianQRGen</h2>
+
+    </div>
+
+    <ul>
+
+        <li onclick="showPage('home')">Home</li>
+
+        <li onclick="showPage('generate')">Generate QR</li>
+
+        <li onclick="showPage('scan')">Scan QR</li>
+
+        <li onclick="showPage('history')">History</li>
+
+        <li onclick="showPage('about')">About</li>
+
+    </ul>
+
+</nav>
+
+<!-- Main Card -->
+
+<div class="container">
+
+    <!-- HOME -->
+
+    <section id="homePage">
+
+        <img class="hero-logo" src="logo.png" alt="Logo">
+
+        <h1>Generate QR Codes Instantly</h1>
+
+        <p>
+
+            Fast • Free • Secure
+
+        </p>
+
+        <button class="primaryBtn"
+
+            onclick="showPage('generate')">
+
+            Start Generating
+
+        </button>
+
+    </section>
+
+    <!-- GENERATE -->
+
+    <section id="generatePage" style="display:none;">
+
+        <h2>Generate QR Code</h2>
+
+        <input
+        id="text"
+        placeholder="Enter Website or Text">
+
+        <button id="generate">
+
+            Generate QR Code
+
+        </button>
+
+        <div id="qrcode"></div>
+
+        <button id="download">
+
+            Download PNG
+
+        </button>
+
+    </section>
+
+    <!-- SCAN -->
+
+    <section id="scanPage" style="display:none;">
+
+        <h2>Scan QR Code</h2>
+
+        <div id="reader"></div>
+
+        <p id="scanResult">
+
+            No QR code scanned yet.
+
+        </p>
+
+    </section>
+
+    <!-- HISTORY -->
+
+    <section id="historyPage" style="display:none;">
+
+        <h2>Recent History</h2>
+
+        <div id="history"></div>
+
+        <button id="clearHistory">
+
+            Clear History
+
+        </button>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="aboutPage" style="display:none;">
+
+        <img class="hero-logo" src="logo.png">
+
+        <h2>BrianQRGen</h2>
+
+        <p>
+
+            BrianQRGen is a professional QR Code Generator
+            developed by
+
+            <strong>MANZI BRIAN BONHEUR</strong>
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Version 2.0
+
+        </p>
+
+    </section>
+
+</div>
+
+<footer>
+
+    Made by
+
+    <strong>MANZI BRIAN BONHEUR</strong>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

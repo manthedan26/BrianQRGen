@@ -1,0 +1,399 @@
+/* ===========================
+   BrianQRGen Pro
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#2563eb,#0f172a);
+    min-height:100vh;
+    color:#333;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    box-shadow:0 3px 15px rgba(0,0,0,.1);
+    z-index:1000;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+}
+
+.brand img{
+    width:45px;
+    height:45px;
+    border-radius:10px;
+    margin-right:10px;
+}
+
+.brand h2{
+    color:#2563eb;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav li{
+    margin-left:30px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav li:hover{
+    color:#2563eb;
+}
+
+/* ===========================
+   Container
+=========================== */
+
+.container{
+
+    width:90%;
+    max-width:700px;
+
+    margin:120px auto 40px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.2);
+
+    animation:fade .5s;
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   Home
+=========================== */
+
+.hero-logo{
+
+    width:100px;
+
+    display:block;
+
+    margin:0 auto 20px;
+
+}
+
+h1{
+
+    color:#2563eb;
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+}
+
+h2{
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+}
+
+p{
+
+    text-align:center;
+
+    color:#666;
+
+}
+
+/* ===========================
+   Input
+=========================== */
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:2px solid #ddd;
+
+    margin:20px 0;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+input:focus{
+
+    border-color:#2563eb;
+
+    outline:none;
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    margin-top:10px;
+
+}
+
+.primaryBtn,
+#generate{
+
+    background:#2563eb;
+
+}
+
+.primaryBtn:hover,
+#generate:hover{
+
+    background:#1d4ed8;
+
+}
+
+#download{
+
+    background:#16a34a;
+
+    display:none;
+
+}
+
+#download:hover{
+
+    background:#15803d;
+
+}
+
+#clearHistory{
+
+    background:#dc2626;
+
+}
+
+#clearHistory:hover{
+
+    background:#b91c1c;
+
+}
+
+/* ===========================
+   QR Code
+=========================== */
+
+#qrcode{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:30px 0;
+
+}
+
+#qrcode img,
+#qrcode canvas{
+
+    background:white;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+/* ===========================
+   Reader
+=========================== */
+
+#reader{
+
+    width:100%;
+
+    max-width:350px;
+
+    margin:20px auto;
+
+}
+
+/* ===========================
+   History
+=========================== */
+
+#history{
+
+    margin-top:20px;
+
+    max-height:250px;
+
+    overflow-y:auto;
+
+}
+
+.history-item{
+
+    background:#f8fafc;
+
+    border-left:5px solid #2563eb;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-bottom:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    word-break:break-word;
+
+}
+
+.history-item:hover{
+
+    background:#dbeafe;
+
+    transform:translateX(5px);
+
+}
+
+/* ===========================
+   About
+=========================== */
+
+#aboutPage p{
+
+    margin-top:15px;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    text-align:center;
+
+    color:white;
+
+    margin-bottom:20px;
+
+    font-size:15px;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    nav{
+
+        flex-direction:column;
+
+        padding:15px;
+
+    }
+
+    nav ul{
+
+        margin-top:15px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    nav li{
+
+        margin:10px;
+
+    }
+
+    .container{
+
+        margin-top:180px;
+
+        width:95%;
+
+        padding:25px;
+
+    }
+
+}
